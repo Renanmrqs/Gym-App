@@ -18,9 +18,9 @@ def users():
 def exercises():
     exercises_api = api.get("/exercises")
     last = []
-    for i, name in enumerate(exercises_api):
-        last.append(f'{i} - {name['name']}')
-    return last
+    for name in exercises_api:
+        last.append(f'{name['id']} - {name['name']}')
+    return last 
 
 ##
 ## primeiro selectbox registrando treino e horario do usuario
@@ -52,7 +52,7 @@ if st.session_state.id_workout is not None:
     )
 
     if st.button("Choise exercise"):
-        id_exercise = select_exercise[0]
+        id_exercise = select_exercise.split(' - ')[0]
         st.session_state.id_exercise = id_exercise
         succes_exercise = api.post(f'/workout_exercise', {'id_workout': st.session_state.id_workout, 'id_exercise': st.session_state.id_exercise})
         st.session_state.id_workout_exercise = succes_exercise['id']
