@@ -18,8 +18,8 @@ def users():
 def exercises():
     exercises_api = api.get("/exercises")
     last = []
-    for name in exercises_api:
-        last.append(f'{name['id']} - {name['name']}')
+    for i, name in enumerate(exercises_api):
+        last.append(f' {i} - {name['name']}')
     return last 
 
 ##
