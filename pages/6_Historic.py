@@ -7,6 +7,8 @@ st.title('Historic Page')
 
 st.subheader('View your historic and see your evolution')
 name = st.text_input('Type your name: ')
+if name:
+    st.session_state.user_name = name
 
 if st.button('Search'):
     try:
