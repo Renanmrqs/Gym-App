@@ -2,7 +2,6 @@
 
 🚧 Em desenvolvimento
 
-
 ## Demo 
 
 [Demo Do Projeto](https://gym-app-eggj82u2wknfk48seq2tmy.streamlit.app/)
@@ -25,16 +24,25 @@ Três fases de evolução:
 
 ## Páginas
 
+### Login
+Autenticação via JWT — token salvo no session_state e enviado no header das requisições protegidas. Páginas sensíveis bloqueiam acesso sem login.
+
+![Login](img/login.png)
+
+### Register
+Cadastro de novo usuário. Senha hasheada com Argon2 antes de ser armazenada.
+
+![Register](img/register.png)
+
 ### Dashboard
-Visão geral dos treinos do usuário — exercícios cadastrados, treinos completos, séries realizadas e maior peso registrado.
+Visão geral dinâmica por usuário logado — exercícios cadastrados, treinos completos, séries realizadas e maior peso registrado.
 
 ![Dashboard](img/dashboard.png)
 
 ### Register Training
-Fluxo completo para registrar um treino: seleção do usuário, escolha do exercício, quantidade de séries, peso e reps.
+Fluxo completo para registrar um treino: seleção do usuário, escolha do exercício, quantidade de séries, peso e reps. Requer autenticação.
 
 ![Register Treino](img/register_treine.png)
-![Register Treino Sucesso](img/register_treine_sucessful.png)
 
 ### Historic
 Consulta o histórico de treinos por usuário — exercício, data, peso e reps de cada série registrada.
@@ -42,7 +50,7 @@ Consulta o histórico de treinos por usuário — exercício, data, peso e reps 
 ![Historic](img/historic.png)
 
 ### Exercises
-Cadastro e listagem de exercícios disponíveis.
+Cadastro e listagem de exercícios disponíveis. Requer autenticação para cadastrar.
 
 ![Exercises](img/add_exercices.png)
 
@@ -90,5 +98,7 @@ Repositório da API: [github.com/Renanmrqs/Gym-Api](https://github.com/Renanmrqs
 
 ## Próximos passos
 
-- Autenticação JWT
-- Dashboard dinâmico por usuário logado
+- Sistema de logout
+- Refresh token automático
+- Gráficos de evolução de carga por exercício
+- Landpage na tela inicial apresentando o app
