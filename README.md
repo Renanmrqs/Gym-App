@@ -58,7 +58,7 @@ Cadastro e listagem de exercícios disponíveis. Requer autenticação para cada
 
 ## Tecnologias
 
-- Python 3.x
+- Python 
 - Streamlit
 - Requests
 
