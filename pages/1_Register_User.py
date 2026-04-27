@@ -1,7 +1,9 @@
 import requests
-import api
 from api import BASE_URL
 import streamlit as st
+from app import sidebar
+
+sidebar()
 
 def register(user, password):
     form_data = {'name': user, 'password': password}

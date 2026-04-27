@@ -1,6 +1,9 @@
 import requests
 import api
 import streamlit as st
+from app import sidebar
+
+sidebar()
 
 if 'user_token' in st.session_state:
     def exercises_post(name, head):

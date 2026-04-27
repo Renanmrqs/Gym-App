@@ -1,6 +1,20 @@
 import requests
-from api import BASE_URL
+from api import BASE_URL, get
 import streamlit as st
+
+
+def sidebar():
+    with st.sidebar:
+        try:
+            api_info = requests.get(f"{BASE_URL}/health", timeout=3)
+            st.success("🟢 API Online")
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
+            st.error('🔴 API Offline')
+        except requests.exceptions.HTTPError:
+            st.warning('🟡 API Online, but with errors')
+
+sidebar()
+
 
 def login(user, password):
     form_data = {'username': user, 'password': password}

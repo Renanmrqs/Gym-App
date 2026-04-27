@@ -1,6 +1,9 @@
 import requests
 from api import BASE_URL
 import streamlit as st
+from app import sidebar
+
+sidebar()
 
 def login(user, password):
     form_data = {'username': user, 'password': password}
@@ -26,6 +29,7 @@ if st.button('Login'):
             st.session_state.user_id = user_logged['user_id']
         st.session_state['user_token'] = token
         st.success(f'{username} logged!')
+        st.switch_page('pages/3_Dashboard.py')
     else:
         msg_error = log_info.json()
         st.error(f'Error : {msg_error['detail']}')
