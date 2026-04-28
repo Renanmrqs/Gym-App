@@ -16,7 +16,7 @@ def sidebar():
 sidebar()
 
 st.title(":red[_Gym Register_]", text_alignment='center')
-st.subheader(':blue[Regigster your workouts and follow your evolution]', text_alignment='center')
+st.subheader(':blue[Register your workouts and follow your evolution]', text_alignment='center')
 
 col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
@@ -28,6 +28,9 @@ with col2:
     st.subheader("Follow your progress and compare with other users")
     st.image("img/historic.png", width="stretch")
 
+st.write("")
+st.write("")
+st.write("")
 
 with col3:
     st.subheader("Track all register and all of your workouts")
