@@ -7,7 +7,7 @@
 
 ---
 
-Evolução do projeto [Gym Register](https://github.com/Renanmrqs/Gym-Register) — que começou como projeto final do curso CS50P de Harvard em CLI — agora com frontend completo em Streamlit consumindo a [Gym API](https://github.com/Renanmrqs/Gym-Api), construída com FastAPI e SQLite durante o estudo do curso Introduction to SQL de Harvard.
+Evolução do projeto [Gym Register](https://github.com/Renanmrqs/Gym-Register) — que começou como projeto final do curso CS50P de Harvard em CLI — agora com frontend completo em Streamlit consumindo a [Gym API](https://github.com/Renanmrqs/Gym-Api), construída com FastAPI e PostgreSQL durante o estudo do curso Introduction to SQL de Harvard.
 
 ---
 
@@ -99,7 +99,7 @@ pip install -r requirements.txt
 
 O app consome a Gym API hospedada no Railway:
 
-🔗 Docs da API: [https://web-production-7fb8d2.up.railway.app/docs](https://gym-api-08pc.onrender.com)
+🔗 Docs da API: [docs/swagger](https://gym-api-08pc.onrender.com)
 
 🔗 Repositório da API: [github.com/Renanmrqs/Gym-Api](https://github.com/Renanmrqs/Gym-Api)
 
