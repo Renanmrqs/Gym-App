@@ -92,7 +92,7 @@ pip install -r requirements.txt
 
 O app consome a Gym API hospedada no Railway:
 
-🔗 [https://web-production-7fb8d2.up.railway.app/docs](https://web-production-7fb8d2.up.railway.app/docs)
+🔗 [Api online](https://gym-api-08pc.onrender.com/docs#/)
 
 Repositório da API: [github.com/Renanmrqs/Gym-Api](https://github.com/Renanmrqs/Gym-Api)
 
