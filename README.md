@@ -1,6 +1,5 @@
-# Gym App
-
-🚧 Em desenvolvimento
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 
 ## Demo 
 
@@ -56,6 +55,15 @@ Cadastro e listagem de exercícios disponíveis. Requer autenticação para cada
 
 ---
 
+## Diferenciais Técnicos
+
+- **Arquitetura Desacoplada:** Frontend (Streamlit) e Backend (FastAPI) rodam de forma independente, comunicando-se via JSON.
+- **Segurança:** Autenticação via JWT (JSON Web Tokens) e hashing de senhas com Argon2.
+- **Persistência:** Integração completa com banco de dados via SQLAlchemy ORM.
+- **UX:** Verificação de status da API em tempo real no sidebar.
+
+---
+
 ## Tecnologias
 
 - Python 
@@ -66,23 +74,17 @@ Cadastro e listagem de exercícios disponíveis. Requer autenticação para cada
 
 ## Como rodar
 
-- **Deploy na nuvem do streamlit:**
+# Crie um ambiente virtual
+python -m venv venv
+# Ative o ambiente
 
-[Deploy](https://gym-app-eggj82u2wknfk48seq2tmy.streamlit.app/)
-
-- **Passo a passo para rodar localmente:**
-
-```bash
-# Clone o repositório
-git clone https://github.com/Renanmrqs/Gym-App
-cd Gym-App
+# No Windows:
+.\venv\Scripts\activate
+# No Linux/Mac:
+source venv/bin/activate
 
 # Instale as dependências
-pip install streamlit requests
-
-# Rode o app
-streamlit run app.py
-```
+pip install -r requirements.txt
 
 ---
 
