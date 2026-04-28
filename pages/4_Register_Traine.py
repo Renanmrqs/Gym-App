@@ -37,7 +37,7 @@ if 'user_token' in st.session_state:
             exercises()
         )
 
-        if st.button("Choise exercise"):
+        if st.button("Choose exercise"):
                 
                 id_exercise = select_exercise.split(' - ')[0]
                 st.session_state.id_exercise = id_exercise

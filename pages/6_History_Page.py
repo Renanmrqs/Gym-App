@@ -19,7 +19,7 @@ try:
     st.subheader(f"{user}'s History")
     st.dataframe(h)
 except requests.exceptions.HTTPError:
-    st.error(f"{user}, you don't have a history")
+    st.error(f"{user}, you don't have a history, please log to see")
 
 st.subheader("See another user's history")
 other_name = st.selectbox(

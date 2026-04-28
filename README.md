@@ -16,12 +16,17 @@ Evolução do projeto [Gym Register](https://github.com/Renanmrqs/Gym-Register) 
 Três fases de evolução:
 
 - **Gym Register** — CLI em Python (CS50P final project)
-- **Gym API** — API REST com FastAPI + SQLite (Introduction to SQL - Harvard)
+- **Gym API** — API REST com FastAPI + PostgreSQL (Introduction to SQL - Harvard)
 - **Gym App** — Frontend em Streamlit consumindo a API ← você está aqui
 
 ---
 
 ## Páginas
+
+### Landpage
+Pagina de inicio, apresentando o app e funcionamento para novos usuarios
+
+![Landpage](img/landpage.png)
 
 ### Login
 Autenticação via JWT — token salvo no session_state e enviado no header das requisições protegidas. Páginas sensíveis bloqueiam acesso sem login.
@@ -44,7 +49,7 @@ Fluxo completo para registrar um treino: seleção do usuário, escolha do exerc
 ![Register Treino](img/register_treine.png)
 
 ### Historic
-Consulta o histórico de treinos por usuário — exercício, data, peso e reps de cada série registrada.
+Consulta o histórico de treinos por usuário — exercício, data, peso e reps de cada série registrada, além de comparar com outros usuarios do app.
 
 ![Historic](img/historic.png)
 
@@ -74,6 +79,7 @@ Cadastro e listagem de exercícios disponíveis. Requer autenticação para cada
 
 ## Como rodar
 
+```bash
 # Crie um ambiente virtual
 python -m venv venv
 # Ative o ambiente
@@ -85,6 +91,7 @@ source venv/bin/activate
 
 # Instale as dependências
 pip install -r requirements.txt
+```
 
 ---
 
@@ -92,15 +99,15 @@ pip install -r requirements.txt
 
 O app consome a Gym API hospedada no Railway:
 
-🔗 [https://web-production-7fb8d2.up.railway.app/docs](https://web-production-7fb8d2.up.railway.app/docs)
+🔗 Docs da API: [https://web-production-7fb8d2.up.railway.app/docs](https://gym-api-08pc.onrender.com)
 
-Repositório da API: [github.com/Renanmrqs/Gym-Api](https://github.com/Renanmrqs/Gym-Api)
+🔗 Repositório da API: [github.com/Renanmrqs/Gym-Api](https://github.com/Renanmrqs/Gym-Api)
 
 ---
 
 ## Próximos passos
 
-- Sistema de logout
-- Refresh token automático
-- Gráficos de evolução de carga por exercício
-- Landpage na tela inicial apresentando o app
+- [-] Sistema de logout
+- [-] Refresh token automático
+- [-] Gráficos de evolução de carga por exercício
+- [✅] Landpage na tela inicial apresentando o app

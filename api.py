@@ -13,4 +13,3 @@ def post(endpoint, data, head):
     response.raise_for_status()
     return  response.json()
 
-##corrigir a linha 42 e o workout exercise

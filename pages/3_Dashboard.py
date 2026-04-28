@@ -14,7 +14,7 @@ if 'user_token' in st.session_state:
 
         user_id = st.session_state.get('user_id')
         exercises = api.get("/exercises")
-        sets = api.get(f"/history/{user}")
+        sets = historic
         workouts = api.get(f"/workout_detail_w_user/{user_id}")
 
         maximo = 0
