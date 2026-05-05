@@ -108,7 +108,7 @@ O app consome a Gym API hospedada no Railway:
 
 ## Próximos passos
 
-- [-] Sistema de logout
-- [-] Refresh token automático
+- [✅] Sistema de logout
+- [✅] Refresh token automático
 - [-] Gráficos de evolução de carga por exercício
 - [✅] Landpage na tela inicial apresentando o app

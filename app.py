@@ -15,18 +15,18 @@ def sidebar():
 
         if 'user_token' in st.session_state:
             if st.button("Logout", type="primary", width="stretch"):
-                    try:
-                        head = {'Authorization': f'Bearer {st.session_state["user_token"]}'}
-                        response = requests.post(f"{BASE_URL}/logout", headers=head)
-                        if response:
-                            st.toast("🟢 Sucessfull Logout")
-                            del st.session_state['user_token']
-                            del st.session_state['user_name']
-                            del st.session_state['user_id']
-                            time.sleep(1.5)
-                            st.switch_page('pages/2_login.py')
-                    except Exception as e:
-                        st.error(f'Erro inesperado: {e}')
+                try:
+                    head = {'Authorization': f'Bearer {st.session_state["user_token"]}'}
+                    response = requests.post(f"{BASE_URL}/logout", headers=head)
+                    if response:
+                        st.toast("🟢 Sucessfull Logout")
+                        del st.session_state['user_token']
+                        del st.session_state['user_name']
+                        del st.session_state['user_id']
+                        time.sleep(1.5)
+                        st.switch_page('pages/2_login.py')
+                except Exception as e:
+                    st.error(f'Erro inesperado: {e}')
 
             
 
