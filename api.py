@@ -3,8 +3,8 @@ import requests
 
 BASE_URL = "https://gym-api-08pc.onrender.com"
 
-def get(endpoint):
-    response = requests.get(f'{BASE_URL}{endpoint}')
+def get(endpoint, head):
+    response = requests.get(f'{BASE_URL}{endpoint}', headers=head)
     response.raise_for_status()
     return response.json()
 
