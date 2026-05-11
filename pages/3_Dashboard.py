@@ -4,15 +4,13 @@ import streamlit as st
 from app import sidebar
 
 
-
-try:
-    sidebar()
-    if 'user_token' in st.session_state:
+sidebar()
+if 'user_token' in st.session_state:
         head = {'Authorization': f'Bearer {st.session_state["user_token"]}'}
-        
         user = st.session_state.get('user_name')
         try:
             historic = api.get(f"/history/{user}", head)
+            
 
             user_id = st.session_state.get('user_id')
             exercises = api.get("/exercises", head)
@@ -42,8 +40,6 @@ try:
             col4.metric('Max Weight', maximo, delta=name_ex, border=True)
         except requests.exceptions.HTTPError:
             st.subheader(
-                f'Welcome to Gym Register {st.session_state.get('user_name', 'Renan')}! Please, add exercises to see your week stats.')
-    else:
-        st.warning('Please, loggin for see this page')
-except requests.exceptions.HTTPError:
+            f'Welcome to Gym Register {st.session_state.get('user_name', 'Renan')}! Please, add exercises to see your week stats.')
+else:
     st.warning('Please, loggin for see this page')

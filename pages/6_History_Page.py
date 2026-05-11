@@ -4,7 +4,7 @@ import streamlit as st
 from app import sidebar
 import pandas as pd
 import datetime as dt
-
+import plotly.express as px
 
 st.title('History Page')
 
@@ -24,13 +24,26 @@ try:
         try:
             h = api.get(f"/history/{user}", head)
             df = pd.DataFrame(h)
-            df['datetime'] = pd.to_datetime(df['datetime'])
+            df['datetime'] = pd.to_datetime(df['datetime'], format='ISO8601')
             df['datetime'] = df['datetime'].dt.tz_convert('America/Sao_Paulo')
             df['datetime'] = df['datetime'].dt.strftime('%d/%m/%Y %H:%M')
             st.subheader(f"{user}'s History")
             st.dataframe(df)
+            
+            select_exercise = st.selectbox("Select exercise to see your evolution", df['exercise'].unique())
+            
+            if st.button('Filter'):
+                df_filtered = df[df['exercise'] == select_exercise]
+                df_max = df_filtered.groupby(['exercise', 'datetime'])['weight'].max().reset_index()
+                
+                fig = px.line(df_max, x='datetime', y='weight', color='exercise')
+                fig.update_yaxes(dtick=5)
+                st.plotly_chart(fig)
+            
         except requests.exceptions.HTTPError:
             st.error(f"{user}, you don't have a history, please log to see")
+            
+            
 
         st.subheader("See another user's history")
         other_name = st.selectbox(
