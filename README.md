@@ -100,7 +100,7 @@ pip install -r requirements.txt
 
 O app consome a Gym API hospedada no Railway:
 
-🔗 Docs da API: [docs/swagger](https://gym-api-08pc.onrender.com)
+🔗 Docs da API: [docs/swagger](https://gym-api-08pc.onrender.com/docs)
 
 🔗 Repositório da API: [github.com/Renanmrqs/Gym-Api](https://github.com/Renanmrqs/Gym-Api)
 
@@ -110,5 +110,5 @@ O app consome a Gym API hospedada no Railway:
 
 - [✅] Sistema de logout
 - [✅] Refresh token automático
-- [-] Gráficos de evolução de carga por exercício
+- [✅] Gráficos de evolução de carga por exercício
 - [✅] Landpage na tela inicial apresentando o app
